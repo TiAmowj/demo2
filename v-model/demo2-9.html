@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-demol-checkbox</title>
+    <script src=" https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js "></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="checkbox" value="唱歌" v-model="hobbies">唱歌
+        <input type="checkbox" value="跳舞" v-model="hobbies">跳舞
+        <input type="checkbox" value="游泳" v-model="hobbies">游泳
+        <input type="checkbox" value="看书" v-model="hobbies">看书
+        <h2>你选择的爱好是:{{hobbies}}</h2>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                hobbies: [] //数组类型
+            }
+        });
+    </script>
+</body>
+
+</html>

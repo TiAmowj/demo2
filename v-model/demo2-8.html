@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-demol-checkbox</title>
+    <script src=" https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js "></script>
+</head>
+
+<body>
+    <div id="app">
+        <label for="agreement">
+            <input type="checkbox" name="" id="agreement" v-model="isagree">同意协议
+        </label>
+        <h2>你的选择是:{{isagree}}</h2>
+        <button :disabled="! isagree">下一步</button>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                isagree: false //布尔类型
+            }
+        });
+    </script>
+</body>
+
+</html>

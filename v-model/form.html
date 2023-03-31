@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>问卷调查</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        姓名:<input type="text " v-model="name ">
+        <br> 性别：
+        <label for="male">
+            <input type="radio" id="male" value="男" v-model="gender">男
+        </label>
+        <label for="female">
+            <input type="radio" id="female" value="女" v-model="gender">女
+        </label>
+        <br> 喜欢的水果:
+        <select name="fruits " v-model="fruit ">
+        <option value="菠萝 ">菠萝</option>
+        <option value="西瓜 ">西瓜</option>
+        <option value="香蕉 ">香蕉</option>
+        <option value="苹果 ">苹果</option>
+        <option value="其他 ">其他</option>
+        </select>
+        <br> 专业技能:
+        <input type="checkbox" value="HTML" v-model="kills">HTML
+        <input type="checkbox" value="PS" v-model="kills">ps
+        <input type="checkbox" value="JAVA" v-model="kills">JAVA
+        <input type="checkbox" value="JS" v-model="kills">JS
+        <br>
+        <button @click="change ">提交</button>
+
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                name: " ",
+                gender: "女",
+                fruit: " ",
+                kills: []
+
+            },
+            methods: {
+                change: function() {
+                    console.log(this.name);
+                    console.log(this.gender);
+                    console.log(this.fruit);
+                    console.log(this.kills);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        姓名
+        <input type="text" v-model="searchName" />
+        <br/> 年龄
+        <input type="text" v-model="der" />
+        <br/> 爱好
+        <input type="text" v-model="ah" />
+        <br/>
+        <button @click="search">提交</button>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                searchName: '',
+                der: '',
+                ah: '',
+            },
+            methods: {
+                search: function() {
+                    console.log(this.searchName);
+                    console.log(this.der);
+                    console.log(this.ah);
+
+                }
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
